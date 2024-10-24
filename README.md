@@ -1,77 +1,23 @@
-//kelas ManusiaViral
-public class ManusiaViral {
-    String nama;
-    String keterampilan;
-    int usia;
-    String hobi;
-    ManusiaViral next;
+BACA SAYA
+Penting! Sebelum teman teman mulai mengerjakan jurnal, harap diperhatikan aturan berikut ini:
+TINGKATAN SOAL
+Jurnal akan terbagi menjadi 3 tingkatan soal: Easy, Medium, dan Hard. Berikut adalah rincian masing-masing tingkatan:
 
-    public ManusiaViral(String nama, String keterampilan, int usia, String hobi) {
-        this.nama = nama;
-        this.keterampilan = keterampilan;
-        this.usia = usia;
-        this.hobi = hobi;
-        this.next = null;
-    }
-}
+1. EASY
+Dengan rentang nilai 65-74
+2. MEDIUM
+Dengan rentang nilai 75-84
+3. HARD
+Dengan rentang nilai 85-100
+TEKNIS PENGERJAAN JURNAL
+Praktikan diwajibkan mengerjakan soal sesuai dengan tingkat kemampuannya, serta dilarang memaksa diri untuk mengambil soal yang melebihi kemampuannya
+Tindakan menyalin atau menyontek kode dari praktikan lain akan dikenakan sanksi berupa nilai 0 untuk jurnal
+Tidak diperbolehkan menggunakan library yang bersangkutan dengan Modul praktikum
+DEADLINE JURNAL
+Jurnal harus dikumpulkan paling lambat pada hari Kamis sebelum pukul 23.59 WITA. Jika melebihi batas waktu tersebut, akses ke repo akan dicabut secara otomatis dan kalian tidak dapat melakukan push lagi
+SARAN
+Jika mengalami masalah dengan jaringan, hindari mengumpulkan jurnal pada saat mendekati waktu deadline yang ditentukan
+Terima kasih atas perhatiannya, dan semoga sukses dalam mengerjakan jurnal!
+"BISA karena TERBIASA, TERBIASA karena TERPAKSA
 
-//kelas singlelinkedlist
-public class SingleLinkedList {
-    private ManusiaViral kepala;
-
-    public SingleLinkedList() {
-        this.kepala = null;
-    }
-
-    public void tambahDepan(String nama, String keterampilan, int usia, String hobi) {
-        ManusiaViral manusiaBaru = new ManusiaViral(nama, keterampilan, usia, hobi); 
-        manusiaBaru.next = kepala;
-        kepala = manusiaBaru;
-    }
-
-    public void tambahBelakang(String nama, String keterampilan, int usia, String hobi) {
-        ManusiaViral manusiaBaru = new ManusiaViral(nama, keterampilan, usia, hobi);
-        if (kepala == null) {
-            kepala = manusiaBaru;
-        } else {
-            ManusiaViral temp = kepala;
-            while (temp.next != null) {
-                temp = temp.next; 
-            }
-            temp.next = manusiaBaru;
-        }
-    }
-
-    public void hapusDepan() {
-        if (kepala != null) {
-            kepala = kepala.next;
-        }
-    }
-
-    public void hapusBelakang() {
-        if (kepala != null) {
-            if (kepala.next == null) {
-                kepala = null;
-            } else {
-                ManusiaViral temp = kepala;
-                while (temp.next.next != null) {
-                    temp = temp.next;
-                }
-                temp.next = null;
-            }
-        }
-    }
-
-    public void tampilkanDaftar() {
-        ManusiaViral temp = kepala;
-        while (temp != null) {
-            System.out.println("Nama: " + temp.nama + ", Keterampilan: " + temp.keterampilan + ", Usia: " + temp.usia + ", Hobi: " + temp.hobi);
-            temp = temp.next;
-        }
-    }
-
-    public static void main(String[] args) {
-        SingleLinkedList daftar = new SingleLinkedList(); 
-        daftar.tambahDepan("Kak Gem", "Kasi Faham", 32, "Bikin Meme"); 
-        daftar.tambahBelakang("Vadel", "Dance Getter", 18, "Dance");
-        daftar.tambahBelakang("Loli",
+- Aditya Rahmatdiansyah -
